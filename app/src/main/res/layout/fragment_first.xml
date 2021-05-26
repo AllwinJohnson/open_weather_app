@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment.FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25ssp"
+            android:fontFamily="@font/sunny_weather"
+            android:text="30"
+            android:textColor="@color/txt"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_30ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="% of battery"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/sunny_weather"
+            android:gravity="left"
+            app:layout_constraintStart_toEndOf="@+id/tvBattery"
+            app:layout_constraintTop_toTopOf="@+id/tvBattery" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/sunny_weather"
+            android:text="OS"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/_25ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBattery" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@null"
+            app:justifyContent="space_evenly"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOs">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/sunny_weather"
+                android:text="Mobile"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/_40sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWiFi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="@font/sunny_weather"
+                android:text="WiFi"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/_40ssp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexBox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@null"
+            app:justifyContent="space_around"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flexBox">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIntM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sunny_weather"
+                android:gravity="left"
+                android:text="Internal"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvExtM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sunny_weather"
+                android:gravity="left"
+                android:text="External"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/_15sdp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flexBox2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_220sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.8"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/card_bg" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No weather data available"
+                    android:textColor="@color/gray"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationView"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/wind" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_weather"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/sunny_weather"
+                    android:text="Cloudy"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_17ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/animationView"
+                    app:layout_constraintTop_toTopOf="@+id/animationView" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sunny_weather"
+                    android:maxLines="1"
+                    android:text="fadsadsa"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/animationView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_weather"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_weather"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:fontFamily="@font/sunny_weather"
+                    android:maxLines="1"
+                    android:text="Place"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_30ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/animationView" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flexBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    app:justifyContent="space_evenly"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_place">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_pressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="27"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_30ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/appCompatTextView4"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="Pressure"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_pressure"
+                            app:layout_constraintStart_toStartOf="@+id/tv_pressure" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="Pa"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toEndOf="@+id/tv_pressure"
+                            app:layout_constraintTop_toTopOf="@+id/tv_pressure" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="27"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_30ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/appCompatTextView3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="Temp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_temp"
+                            app:layout_constraintStart_toStartOf="@+id/tv_temp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="°C"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toEndOf="@+id/tv_temp"
+                            app:layout_constraintTop_toTopOf="@+id/tv_temp" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="27"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_30ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/appCompatTextView5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="Humidiity"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tv_humidity"
+                            app:layout_constraintStart_toStartOf="@+id/tv_humidity" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sunny_weather"
+                            android:text="RHhr"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toEndOf="@+id/tv_humidity"
+                            app:layout_constraintTop_toTopOf="@+id/tv_humidity" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
